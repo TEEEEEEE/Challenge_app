@@ -1,0 +1,7 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<div class="post">
+    <%= link_to(posts_path) do %>
+        <%= line_chart Post.group(:title).group_by_day(:day).average(:point), id:"line_chart",ytitle:"Point" %>
+    <% end %>
+</div>
