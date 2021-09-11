@@ -2,8 +2,9 @@
 
 <h1>Posts</h1>
 
-<%= line_chart Post.group_by_day(:day).average(:point), id:"line_chart" %>
-
+<div class="post">
+  <%= line_chart Post.group_by_day(:day).average(:point), id:"line_chart",ytitle:"Point" %>
+</div>
 <table>
   <thead>
     <tr>
